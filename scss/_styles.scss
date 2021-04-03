@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+// nav start
+.logo{
+    text-decoration: none;
+    color: $white;
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    &:hover{
+        color: rgba(15, 235, 158, .9);
+    }
+}
+.logo + p{
+    font-size: 13px;
+    color:rgba(255, 255, 255, .3);
+    font-weight: 400;
+    margin-bottom: 0rem;
+    padding-left: 50px;
+    position: relative;
+    &:after{
+        background: url(../svg/suffix-vertical-logo.svg);
+        content: "";
+        position: absolute;
+        top:9px;
+        left:22px;
+        width:17px;
+        height: 1px;
+        transform: rotate(90deg);
+    }
+
+}
+.bg-color-of-header{
+    padding:10px;
+    background:rgba(16, 22, 54, 0.2);
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    @include media-breakpoint-up(lg){
+        height: 70px;
+    }
+    .menu-font {
+        @include media-breakpoint-up(lg){
+            height: 70px;
+        }
+        
+        li{
+            text-align: center;
+            padding: 15px 0px;
+            @include media-breakpoint-up(lg){
+                padding: 0px 0px 0px 33px;
+            }
+            
+        }
+        a{
+            font-size: 2.5rem;
+            @include media-breakpoint-up(lg){
+                border-top:1px solid transparent;
+                font-size: 0.813rem;
+                font-weight: 400;
+                padding-top:35px;
+                &:hover{
+                    border-top:1px solid $PictonBlue;
+                }
+            }
+        }
+        .active{
+            border-top:1px solid $PictonBlue;
+        }
+    }
+}
+// nav end
+
+
+
+// slider content start
+.custom-slider{
+    .slide-1-content{
+        background: url(../img/slider-intro-01.png) no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .slide-2-content{
+        background: url(../img/slider-intro-02.png) no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .slide-3-content{
+        background: url(../img/slider-intro-01.png) no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .splide__arrows{
+        display: none;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 173px;
+        h1{
+            font-size: 62px;
+            color: $white;
+            font-weight: 200;
+            margin-bottom: 0rem;
+            line-height: 58px;
+            span{
+                font-weight: 700;
+            }
+        }
+        strong{
+            margin-bottom: 10px;
+            span{
+                color: rgba(15, 235, 158, .9);
+            }
+            font-size: 48px;
+            font-weight: 200;
+            color: rgba(255, 255, 255 , .9);
+        }
+        p{
+            color: rgba(255, 255, 255 , .9);
+            font-size: 18px;
+            font-weight: 200;
+            margin-bottom: 0rem;
+            position: relative;
+            &:before{
+                background: url(../svg/suffix.svg);
+                content: "";
+                position: absolute;
+                top:14px;
+                left:-60px;
+                width:28px;
+                height: 1px;
+            }
+            &:after{
+                background: url(../svg/suffix.svg);
+                content: "";
+                position: absolute;
+                top:14px;
+                right:-60px;
+                width:28px;
+                height: 1px;
+            }
+        }
+    }
+    .splide__pagination{
+        position: absolute;
+        top: calc(50% - 15px);
+        right: 48px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+        height: 53px;
+        justify-content: space-between;
+        .splide__pagination__page{
+            padding:0px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid #333b3f;
+        }
+        .is-active{
+                background: $white;
+                border: 1px solid $white
+            }
+    }
+}
+// slider content end

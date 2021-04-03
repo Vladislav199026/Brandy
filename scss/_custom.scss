@@ -1,0 +1,17 @@
+@import "variables";
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1170px
+);
+
+$font-family-base: 'Open Sans', sans-serif;
+$grid-gutter-width: 0rem;
+$navbar-dark-color: $white;
+$navbar-dark-active-color: rgba(15, 235, 158, .9);
+$navbar-dark-hover-color: rgba(15, 235, 158, .9);
+$navbar-nav-link-padding-x: 0rem;
+$nav-link-padding-y: 0rem;
+$navbar-padding-y: 0rem;
