@@ -22,7 +22,9 @@
 .icon-googleplus-media::before,
 .icon-behance-media:before,
 .content p:before,
-.content p:after {
+.content p:after,
+.arrow-send:before,
+.heart-footer::before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;

@@ -43,9 +43,9 @@
     }
     .menu-font {
         height: 100vh;
-        padding-top:20px;
-        background:rgba(16, 22, 54, 1);
-        margin-top:50px;
+        // padding-top:20px;
+        background:rgba(27, 173, 122, 0.9);
+        margin-top:5px;
         @include media-breakpoint-up(lg){
             height: 70px;
             padding-top:0px;
@@ -59,28 +59,24 @@
             @include media-breakpoint-up(lg){
                 padding: 0px 0px 0px 33px;
             }
-            
-        }
-        a{
-            font-size: 2.5rem;
-            display: inline-block;
-            &:hover{
-                color:yellow;
-            }
-            @include media-breakpoint-up(lg){
-                border-top:1px solid transparent;
-                font-size: 0.813rem;
-                font-weight: 400;
-                padding-top:35px;
-                &:hover{
-                    border-top:1px solid $PictonBlue;
-                    transition: .15s;
+            a{
+                font-size: 2.5rem;
+                display: inline-block;
+                @include media-breakpoint-up(lg){
+                    border-top:2px solid transparent;
+                    font-size: 0.813rem;
+                    font-weight: 400;
+                    padding-top:35px;
+                    &:hover{
+                        border-top:2px solid $PictonBlue;
+                        transition: .15s;
+                    }
                 }
             }
         }
         .active{
             @include media-breakpoint-up(lg){
-                border-top:1px solid $PictonBlue;
+                border-top:2px solid $PictonBlue;
             }
         }
     }
@@ -223,9 +219,14 @@
 // features start
 
 .bg-color-of-conten{
-    background: #f4f7f9;
-    padding-bottom: 55px;
-    margin-bottom: 88px;
+    background: $AquaHaze;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    @include media-breakpoint-up(md){
+        padding-bottom: 130px;
+        margin-bottom: 87px;
+    }
+    
     .media-link{
         list-style: none;
         display: flex;
@@ -268,9 +269,13 @@
         }
     }
     .services{
-        padding: 65px 0px 87px 0px;
-        .caption{
-            color:#0eb493;
+        padding: 30px 0px 75px 0px;
+        @include media-breakpoint-up(md){
+            padding: 65px 0px 87px 0px;
+        }
+        
+        .caption-features{
+            color:$Niagara;
             font-size:28px;
             font-weight: 800;
             letter-spacing: -1px;
@@ -312,22 +317,23 @@
         }
     }
     .features{
+        
         span{
             width:40px;
             height: 40px;
             border-radius: 50%;
-            border: 1px solid  #0eb493;
+            border: 1px solid  $Niagara;
             display: inline-block;
             position: relative;
             margin:0px 16px 0px 14px;
         }
         strong{
             font-size: 20px;
-            color: #062033;
+            color: $BlackPearl;
             font-weight: 600;
         }
         p{
-            padding-left: 70px;
+            padding: 3px 5px 5px 70px;
             font-size: 13px;
             color:rgba(6, 32, 51, .7);
             line-height: 21px;
@@ -372,16 +378,16 @@
 
 
 .works{
-    padding-bottom: 43px;;
-    .caption{
-        color:#0eb493;
+    padding-bottom: 31px;;
+    .caption-works{
+        color:$Niagara;
         font-size:28px;
         font-weight: 800;
         letter-spacing: -1px;
         text-transform: uppercase;
         display: inline-block;
         padding-left: 20px;
-        padding-bottom: 55px;
+        padding-bottom: 60px;
         .icon-heart{
             position: relative;
             &:before{
@@ -415,14 +421,18 @@
             height: 1px;
         }
     }
+    strong{
+        display: inline-block;
+        padding-bottom: 60px;
+    }
     p{
         font-size: 18px;
-        color:#062033;
+        color:$BlackPearl;
         font-weight: 600;
         padding: 0px 10px;
-        line-height: 26px;
+        line-height: 24px;
         margin-bottom:0px;
-        padding-bottom: 48px;
+        padding-bottom: 42px;
     }
     .work-links{
         width:auto;
@@ -448,7 +458,7 @@
                     text-decoration: none;
                     font-size: 14px;
                     font-weight: 600;
-                    color:#062033;
+                    color:$BlackPearl;
                     padding: 10px 18px;
                     display: inline-block;
                     &:hover{
@@ -469,7 +479,11 @@
 // images start
 
 .imagination{
-    margin-bottom: 100px;
+    margin-bottom: 30px;
+    @include media-breakpoint-up(md){
+        margin-bottom: 89px;
+    }
+    
     .kong,
     .pelican,
     .lake,
@@ -536,7 +550,10 @@
 }
 // our team start
 .our-team{
-    padding-bottom: 215px;
+    padding-bottom: 30px;
+    @include media-breakpoint-up(xl){
+        padding-bottom: 215px;
+    }
     .team{
         color:#0eb493;
         font-size:28px;
@@ -544,8 +561,8 @@
         letter-spacing: -1px;
         text-transform: uppercase;
         display: inline-block;
-        padding-left: 20px;
-        padding-bottom: 55px;
+        padding-left: 18px;
+        padding-bottom: 58px;
         .icon-heart{
             position: relative;
             &:before{
@@ -581,22 +598,29 @@
     }
     p{
         font-size: 18px;
-        color:#062033;
+        color:$BlackPearl;
         font-weight: 600;
         padding: 0px 10px;
-        line-height: 26px;
+        line-height: 24px;
         margin-bottom:0px;
-        padding-bottom: 105px;
+        padding-bottom: 40px;
+        @include media-breakpoint-up(md){
+            padding-bottom: 107px;
+        }
+        
     }
 }
 
 .employee{
+    margin-bottom: 30px;
     text-align: center;
-    margin-bottom: 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include media-breakpoint-up(md){
+        margin-bottom: 90px;
+    }
     .photo{
         max-width:270px;
         max-height: 300px;
@@ -621,7 +645,7 @@
     }
     strong{
         font-size: 18px;;
-        color:#062033;
+        color:$BlackPearl;
         font-weight: 700;
     }
     @include media-breakpoint-up(xl){
@@ -735,10 +759,15 @@
     min-height: 600px;
     background: url(../img/city-filter.png) no-repeat 50%50%;
     background-size: cover;
-    padding: 88px 0px;
-    margin-bottom: 88px;
+    padding: 30px 0px;
+    margin-bottom: 30px;
+    @include media-breakpoint-up(md){
+        padding: 88px 0px;
+        margin-bottom: 88px;
+    }
+    
     .facts{
-        color:#0eb493;
+        color:$Niagara;
         font-size:28px;
         font-weight: 800;
         letter-spacing: -1px;
@@ -759,18 +788,17 @@
             }
         }
         .heart:before{
-            background: url(../svg/suffix-heart.svg);
+            background: url(../svg/suffix-heart-gray.svg);
             bottom:-22px;
             left:-3px;
             display: block;
             position: relative;
             content: "";
             width:90px;
-            height: 1px;
-            
+            height: 1px;            
         }
         .heart:after{
-            background: url(../svg/suffix-heart.svg);
+            background: url(../svg/suffix-heart-gray.svg);
             bottom:-22px;
             left:137px;
             display: block;
@@ -853,7 +881,7 @@
 
 // discuss start
 .discuss{
-    color:#0eb493;
+    color:$Niagara;
     font-size:28px;
     font-weight: 800;
     letter-spacing: -1px;
@@ -896,49 +924,74 @@
 }
 p{
     font-size: 18px;
-    color:#062033;
+    color:$BlackPearl;
     font-weight: 600;
     padding: 0px 10px;
     line-height: 26px;
     margin-bottom:0px;
-    padding-bottom: 77px;
+    padding-bottom: 30px;
+    @include media-breakpoint-up(md){
+        padding-bottom: 74px;
+    }
+    
 }
 .form-for-comunication{
-    .contact{
+    .contact{ 
+        padding: 0px 10px;
+        @include media-breakpoint-up(md){
+            padding:0px;
+        }
         strong{
+            text-align: center;
             font-size: 22px;
-            color: #062033;
+            color: $BlackPearl;
             line-height: 32px;
             font-weight: 400;
             padding-bottom: 31px;
+            @include media-breakpoint-up(md){
+                text-align: left;
+            }
         }
         p{
-            font-size: 13px;
-            color: #6a737b;
+            font-size: 16px;
+            color: $Nevada;
             line-height: 24px;
             margin:0;
             padding:0;
             font-weight: 400;
+            @include media-breakpoint-up(lg){
+                font-size: 13px;
+            }
         }
         .info-contacts{
+            padding-bottom: 30px;
+            @include media-breakpoint-up(md){
+                padding-bottom:0px;
+            }
             a{
                 text-decoration: none;
-                color: #6a737b;
-                font-size: 13px;
+                color: $Nevada;
+                font-size: 16px;
+                @include media-breakpoint-up(lg){
+                    font-size: 13px;
+                }
                 &:hover{
-                    color:#000;
+                    color:$Black;
                 }
             }
         }
     }
     .form > strong{
         font-size: 24px;
-        color: #062033;
+        color: $BlackPearl;
         font-weight: 700;
         padding-left: 8px;
         line-height: 27px;
         display: block;
-        padding-bottom: 43px;
+        padding-bottom: 0px;
+        @include media-breakpoint-up(lg){
+            padding-bottom: 43px;
+        }
     }
 
     ::placeholder{
@@ -951,12 +1004,20 @@ p{
         font: 400 13px 'Open Sans', sans-serif;
         color: rgba(91, 100, 110, .5);
         line-height: 26px;
+        margin-top: 35px;;
+        @include media-breakpoint-up(lg){
+            margin-top:0px;
+        }
         &:focus{
             outline:none
         }
     }
     .blanks{
-        margin:0px 0px 51px;
+        margin: 0px 0px 0px;
+        @include media-breakpoint-up(lg){
+            margin:0px 0px 51px;
+        }
+        
     }
     .form-text{
         position: relative;
@@ -968,8 +1029,11 @@ p{
                 display: block;
                 position: absolute;
                 content: "";
-                width:95%;
+                width:99%;
                 height: 1px;
+                @include media-breakpoint-up(lg){
+                    width:95%;
+                }
             }
             input{
                 padding: 0px;
@@ -982,16 +1046,24 @@ p{
             &:before{
                 background: url(../svg/suffix-heart.svg);
                 bottom:-14px;
-                left:19px;
+                left:7px;
                 display: block;
                 position: absolute;
                 content: "";
-                width:95%;
+                width:99%;
                 height: 1px;
+                @include media-breakpoint-up(lg){
+                    left:19px;
+                    width: 95%;
+                }
             }
             input{
                 padding:0px;
-                margin: 0px 0px 0px 18px;
+                margin: 0px 0px 0px 7px;
+                @include media-breakpoint-up(lg){
+                    margin: 0px 0px 0px 18px;
+                }
+                
             }
     }
     .form-message{
@@ -1024,7 +1096,7 @@ p{
             margin-left: 20px;
             &::before{
                 content: "\e90a";
-                color: #0eb493;
+                color: $Niagara;
                 top:4px;
                 left:-34px;
                 font-size:16px;
@@ -1039,14 +1111,22 @@ p{
     .media-links{
         ul{
             display:flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row;
+            justify-content: center;
             width: 100%;
             padding:14px 0px 0px 6px;
             margin:0px;
+            @include media-breakpoint-up(lg){
+                flex-direction: column;
+                align-items: center;
+            }
             li{
                 list-style: none;
-                padding-bottom: 44px;
+                padding-right: 70px;
+                padding-top:20px;
+                @include media-breakpoint-up(lg){
+                    padding:0px 0px 44px 0px;
+                }
                 a{
                     text-decoration: none;
                     position: relative;
@@ -1100,7 +1180,11 @@ p{
     }
 }
 .class-for-pad{
-    padding-bottom: 105px;
+    padding-bottom: 70px;
+    @include media-breakpoint-up(lg){
+        padding-bottom: 105px;
+    }
+    
 }
 // discuss end
 
@@ -1114,7 +1198,220 @@ p{
 
 // footer start
 .bg-footer{
-    height: 410px;
     background: rgb(30, 167, 141);
     border-top: 5px solid #062033;
+    padding:30px 10px 30px;
+    @include media-breakpoint-up(xl){
+        padding:86px 0px 125px;
+    }
+    
+    .items{
+        padding-bottom: 29px;
+        .footer-logo{
+            padding-right: 15px;
+            p{
+                font-size: 15px;
+                font-weight: 400;
+                color:$white;
+                line-height: 24px;
+                padding:0px 0px 25px 0px;
+                @include media-breakpoint-up(xl){
+                    font-size: 13px;
+                    padding:0px;
+                }
+            }
+            h1{
+                margin:0px;
+                display: inline-block;
+                padding-bottom: 15px;
+                @include media-breakpoint-up(xl){
+                    padding-bottom:29px;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: $white;
+                font-family: 'Pacifico', cursive;
+                font-size: 28px;
+                &:hover{
+                    color: rgba(15, 235, 158, .9);
+                    transition: .5s;
+                }
+            }
+        }
+        .subscribe{
+            padding:0px;
+            @include media-breakpoint-up(xl){
+                padding: 8px 15px 5px 7px;
+            }
+            input[type="text"]{
+                width:100%;
+                border: 2px solid $white;
+                background: rgb(30, 167, 141);
+                font: 400 13px 'Open Sans', sans-serif;
+                color: $white;
+                padding: 0px 45px 0px 5px;
+                border-radius: 5px;
+                line-height: 43px;
+                margin-bottom: -7px;
+                &:focus{
+                    outline: none;
+                    border-color: rgba(255, 255, 255 , .8);
+                }
+            }
+            input[type="submit"]{
+                position: absolute;
+                margin-left: -9999px;
+            }
+            form{
+                position: relative;
+            }
+            .arrow-send:before{
+                content: "\e90c";
+                color: rgb(176, 224, 215);
+                top:17px;
+                right: 19px;
+                font-size: 14px;
+                display: block;
+                position: absolute;
+                cursor: pointer;
+            }
+            p{
+                font-size: 15px;
+                font-weight: 400;
+                color:$white;
+                line-height: 24px;
+                padding:0px 0px 25px 0px;
+                @include media-breakpoint-up(xl){
+                    font-size: 13px;
+                    padding:0px;
+                }
+            }
+        strong{
+            font-size: 18px;
+            font-weight: 600;
+            color:rgba(255, 255, 255 , .8);
+            display: inline-block;
+            padding-bottom:15px;
+            @include media-breakpoint-up(xl){
+                padding-bottom:42px;
+                font-size: 14px;
+            }
+        }
+    }
+    .explore{
+        padding-left: 0px;
+        @include media-breakpoint-up(xl){
+            padding-left: 17px;
+        }
+        strong{
+            font-size: 18px;
+            font-weight: 600;
+            padding-bottom:15px;
+            color:rgba(255, 255, 255 , .8);
+            display: inline-block;
+            @include media-breakpoint-up(xl){
+                padding-bottom:33px;
+                font-size: 14px;
+            }
+        }
+        .main-list-footer{
+            display: flex;
+            flex-direction: row;
+            padding:0px 0px 25px 0px;
+            margin:0px;
+            @include media-breakpoint-up(xl){
+                padding:0px 0px 0px 0px;
+            }
+            li{
+                list-style: none;
+                padding-right: 10px;
+            }
+            .list-column{
+                padding: 0px 21px 0px 0px;
+                margin:0px;
+                li{
+                    list-style: none;
+                    padding-bottom: 8px;;
+                    a{
+                        font-size: 13px;
+                        text-decoration: none;
+                        color:$white;
+                        &:hover{
+                            color: rgba(255, 255, 255 , .8);
+                        }
+                    }
+                } 
+            }         
+        }
+    }
 }
+ .info-owner{
+    //  padding:20px 0px 0px;
+     text-align: center;
+        @include media-breakpoint-up(md){
+            text-align: left;
+        }
+         @include media-breakpoint-up(xl){
+            padding-left: 41px;
+        }
+        .line{
+            position:relative;
+            &:before{
+                background: url(../svg/suffix-vertical-logo.svg);
+                content: "";
+                position: absolute;
+                // top:24px;
+                // left:-32px;
+                width:39px;
+                height: 1px;
+                transform: rotate(90deg);
+                display: none;
+                @include media-breakpoint-up(sm){
+                    display: block;
+                    top:24px;
+                    left:-2px;
+                }
+                @include media-breakpoint-up(md){
+                    top:24px;
+                    left:-32px;
+                }
+            }
+        }
+        p{
+            font-size: 13px;
+            font-weight: 400;
+            color:$white;
+            line-height: 24px;
+            padding:0px 0px 48px 0px;
+            position:relative;
+            a{
+                text-decoration: none;
+                color:rgb(6, 32, 51);
+                &:hover{
+                    color: rgba(6, 32, 51, .7)
+                }
+            }
+            &:last-child{
+                padding-bottom: 0px;
+            }
+        }
+        .heart-footer{
+            position: relative;
+            display: inline-block;
+            width: 37px;
+            &::before{
+                content: "\e909";
+                display: block;
+                left:9px;
+                top:-13px;
+                font-size: 15px;
+                color: rgba(0, 0, 0, .3);
+                position: absolute;
+            }
+            
+        }
+    }
+}
+
+// footer end
