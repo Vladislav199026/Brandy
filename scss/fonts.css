@@ -24,7 +24,8 @@
 .content p:before,
 .content p:after,
 .arrow-send:before,
-.heart-footer::before {
+.heart-footer::before,
+.line:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;

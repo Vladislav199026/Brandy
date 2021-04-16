@@ -823,7 +823,9 @@
         height: 130px;
         border-radius: 50%;;
         border: 2px solid rgba(255, 255, 255, .4);
-        display:inline-block;
+        display:flex;
+        justify-content: center;
+        align-items: center;
         content: "";
         position: relative;
         margin-bottom: 27px;
@@ -847,35 +849,116 @@
                 padding-bottom: 0px;
             }
         }
-        span:before{
-            position: absolute;
-            top: calc(50% - 20px);
-            left: calc(50% - 20px);
-            width:40px;
-            height: 40px;
-            background: url(../svg/clock-icon.svg) no-repeat;
-            content: "";
+        // span:before{
+        //     position: absolute;
+        //     top: calc(50% - 20px);
+        //     left: calc(50% - 20px);
+        //     width:40px;
+        //     height: 40px;
+        //     background: url(../svg/clock-icon.svg) no-repeat;
+        //     content: "";
+        // }
+    }
+    // .Hours-of-Work{  
+    //     span:before{
+    //         background: url(../svg/clock-icon.svg) no-repeat;
+    //     }
+    // }
+    // .Satisfied-Clinets{
+    //     span:before{
+    //         background: url(../svg/friends-icon.svg) no-repeat;
+    //     }
+    // }
+    // .Projects-delivered{
+    //     span:before{
+    //         background: url(../svg/rocket-icon.svg) no-repeat;
+    //     }
+    // }
+    // .Awards-Won{
+    //     span:before{
+    //         background: url(../svg/cup-icon.svg) no-repeat;
+    //     }
+    // }
+
+    .Hours-of-Work span{
+        svg{
+            fill:transparent;
+            path{
+                stroke: $white;
+                stroke-dasharray: 120;
+                stroke-dashoffset: 0;
+            }
+        }
+        &:hover{
+            path{
+                stroke: $white;
+                animation: animation-icon 2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards; 
+            }
+               
         }
     }
-    .Hours-of-Work{  
-        span:before{
-            background: url(../svg/clock-icon.svg) no-repeat;
+    .Satisfied-Clinets span{
+        svg{
+            fill:transparent;
+            path{
+                stroke: $white;
+                stroke-dasharray: 120;
+                stroke-dashoffset: 0;
+            }
+        }
+        &:hover{
+            path{
+                stroke: $white;
+                animation: animation-icon 2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards; 
+            }  
         }
     }
-    .Satisfied-Clinets{
-        span:before{
-            background: url(../svg/friends-icon.svg) no-repeat;
+    .Projects-delivered span{
+        svg{
+            fill:transparent;
+            path{
+                stroke: $white;
+                stroke-dasharray: 120;
+                stroke-dashoffset: 0;
+            }
+        }
+        &:hover{
+            path{
+                stroke: $white;
+                animation: animation-icon 2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards; 
+            }   
         }
     }
-    .Projects-delivered{
-        span:before{
-            background: url(../svg/rocket-icon.svg) no-repeat;
+    .Awards-Won span{
+        svg{
+            fill:transparent;
+            path{
+                stroke: $white;
+                stroke-dasharray: 146;
+                stroke-dashoffset: 0;
+            }
+        }
+        &:hover{
+            path{
+                stroke: $white;
+                animation: animation-icon 2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards; 
+            }   
         }
     }
-    .Awards-Won{
-        span:before{
-            background: url(../svg/cup-icon.svg) no-repeat;
-        }
+}
+@keyframes animation-icon{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dashoffset: 120;
+    }
+    85%{
+        stroke-dashoffset: 120;
+    }
+    100%{
+        stroke-dashoffset: 120;
+        fill: $white 
     }
 }
 
